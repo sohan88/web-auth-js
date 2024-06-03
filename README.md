@@ -8,7 +8,7 @@ WebAuthn (Web Authentication) is part of the FIDO2 set of specifications, which 
 
 The `@simplewebauthn/server` library simplifies the integration of WebAuthn into your Node.js applications. It provides utility functions to generate WebAuthn options and to verify the responses from the client's WebAuthn API.
 
-##Passkeys
+## Passkeys
 Passkeys represent a compelling WebAuthn-based alternative to the timeless combination of "password + second-factor" that we all suffer through.
 
 Passkeys are phishing-resistant, are unique across every website, and can help users maintain account access after device loss.
@@ -45,16 +45,16 @@ Install the dependencies:
     ```sh
     npm install
     ```
-##Usage
+## Usage
 ```sh
 npm start
 ```
 Open your browser and navigate to `http://localhost:3000` to view the application.
 Open your browser and navigate to http://localhost:3000.
 
-##API Endpoints
-###Register User
-####POST /register
+## API Endpoints
+### Register User
+#### POST /register
 Registers a new user.
 
 Request Body:
@@ -71,8 +71,8 @@ Response:
 }
 ```
 
-###Generate Registration Challenge
-####POST /register/challenge
+### Generate Registration Challenge
+#### POST /register/challenge
 Generates a registration challenge for a user.
 
 Request Body:
@@ -110,8 +110,8 @@ Response:
 }
 ```
 
-###Verify Registration
-####POST /register/verify
+### Verify Registration
+#### POST /register/verify
 Verifies the user's registration response.
 
 Request Body:
@@ -132,8 +132,8 @@ Response:
 }
 
 ```
-###Generate Login Challenge
-####POST /login/challenge
+### Generate Login Challenge
+#### POST /login/challenge
 Generates a login challenge for a user.
 
 Request Body:
@@ -142,8 +142,8 @@ Request Body:
   "userId": "user_1234567890"
 }
 ```
-###Verify Login
-####POST /login-verify
+### Verify Login
+#### POST /login-verify
 Verifies the user's login response.
 
 Request Body:
@@ -163,7 +163,7 @@ Response:
 }
 ```
 
-##Code Explanation
+## Code Explanation
 `@simplewebauthn/server` Library
 The @simplewebauthn/server library provides the following key functions used in this project:
 
@@ -172,11 +172,11 @@ The @simplewebauthn/server library provides the following key functions used in 
 * `generateAuthenticationOptions`: Generates the options required for a user to authenticate with an existing credential.
 * `verifyAuthenticationResponse`: Verifies the response received from the client after a user attempts to authenticate.
 
-###Key Components
+### Key Components
 * `userstore`: An in-memory store for user data.
 * challengeStore: An in-memory store for WebAuthn challenges.
 
-###Routes
+### Routes
 * `/register`: Handles user registration.
 * `/register/challenge`: Generates a registration challenge for the user.
 * `/register/verify`: Verifies the user's registration response.
@@ -184,7 +184,8 @@ The @simplewebauthn/server library provides the following key functions used in 
 * ` /login-verify`: Verifies the user's login response.
 
 
-##License
+## License
+
 ```css
 
 This version of the `Readme.md` provides a more detailed introduction to the WebAuthn protocol, a clearer explanation of the `@simplewebauthn/server` library, and a thorough breakdown of the API endpoints and their purposes. 
