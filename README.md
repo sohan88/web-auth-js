@@ -173,8 +173,9 @@ The @simplewebauthn/server library provides the following key functions used in 
 * `verifyAuthenticationResponse`: Verifies the response received from the client after a user attempts to authenticate.
 
 ### Key Components
+The components are used as In-ry stores and should be replaced by actual DB or some persistent storage in future
 * `userstore`: An in-memory store for user data.
-* challengeStore: An in-memory store for WebAuthn challenges.
+* `challengeStore`: An in-memory store for WebAuthn challenges. 
 
 ### Routes
 * `/register`: Handles user registration.
